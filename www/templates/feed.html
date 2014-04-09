@@ -1,0 +1,32 @@
+<ion-view title="Feed" hide-back-button="true">
+
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+    <ion-content has-header="true" padding="true">
+
+        <ion-refresher
+                pulling-text="Pull to refresh..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+
+        <div ng-repeat="item in items" class="list card">
+            <div class="item item-avatar">
+                <img src="https://graph.facebook.com/{{ item.from.id }}/picture"/>
+                <h2>{{item.from.name}}</h2>
+                <p>{{item.created_time | date:'MMM d, y h:mma'}}</p>
+            </div>
+            <div class="item item-body">
+                <p ng-if="item.story">{{item.story}}</p>
+
+                <p>{{item.message}}</p>
+
+                <img ng-if="item.picture" ng-src="{{ item.picture }}"/>
+
+            </div>
+        </div>
+
+    </ion-content>
+
+</ion-view>

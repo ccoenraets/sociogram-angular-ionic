@@ -1,0 +1,25 @@
+<ion-view title="Share">
+
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+    <ion-content has-header="true" padding="true">
+
+        <div class="list list-inset">
+
+            <label class="item item-input">
+                <textarea placeholder="What's on your mind?" ng-model="item.message" rows="10"></textarea>
+            </label>
+
+            <button class="button button-block button-positive" ng-click="share()">
+                Share
+            </button>
+
+            <p>{{status}}</p>
+
+        </div>
+
+    </ion-content>
+
+</ion-view>

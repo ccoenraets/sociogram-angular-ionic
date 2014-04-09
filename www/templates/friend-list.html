@@ -1,0 +1,17 @@
+<ion-view title="Friends">
+
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+    <ion-content has-header="true">
+
+        <ion-list>
+            <ion-item ng-repeat="friend in friends" href="#/app/person/{{friend.id}}">
+                {{friend.name}}
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+
+</ion-view>

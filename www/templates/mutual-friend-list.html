@@ -1,0 +1,13 @@
+<ion-view title="Mutual Friends">
+
+    <ion-content has-header="true">
+
+        <ion-list>
+            <ion-item ng-repeat="friend in friends" href="#/app/person/{{friend.id}}">
+                {{friend.name}}
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+
+</ion-view>

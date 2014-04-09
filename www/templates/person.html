@@ -1,0 +1,21 @@
+<ion-view title="Friend">
+
+    <ion-content has-header="true" padding="true">
+
+        <div class="list card">
+            <div class="item">
+                <h2>{{user.name}}</h2>
+                <p>{{user.email}}</p>
+            </div>
+            <div class="item item-image">
+                <img src="https://graph.facebook.com/{{ user.id }}/picture?width=400&height=400" />
+            </div>
+            <a class="item item-icon-left assertive" href="#/app/person/{{user.id}}/mutualfriends">
+                <i class="icon ion-ios7-people"></i>
+                Mutual Friends
+            </a>
+        </div>
+
+    </ion-content>
+
+</ion-view>
